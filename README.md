@@ -1,13 +1,21 @@
-## flowmap.gl with Maplibre example
+# Sudan DTM Flow Map 2026
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz_small.svg)](https://stackblitz.com/github/ilyabo/flowmap.gl-purejs-example?file=main.js)
+An interactive flow map visualising displacement movements across Sudan, built using DTM (Displacement Tracking Matrix) data.
 
+## What it shows
 
-![image](https://github.com/ilyabo/flowmap.gl-purejs-example/assets/351828/504630cc-5dbb-407f-9278-81532c57435e)
+- Flow lines between origin states and destination localities
+- Filter by origin state to see outgoing flows
+- Filter by destination locality to see incoming flows
+- Tooltip shows flow volume and location type
 
-## Usage
+## Built with
 
-```bash
-yarn
-yarn dev
-```
+- [deck.gl](https://deck.gl) — WebGL map layers
+- [flowmap.gl](https://flowmap.gl) — flow line rendering
+- [Mapbox GL JS](https://mapbox.com) — base map
+- [Vite](https://vitejs.dev) — build tool
+
+## Data Source
+
+DTM Sudan displacement data — IOM 2026.

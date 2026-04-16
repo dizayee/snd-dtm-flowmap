@@ -2,8 +2,23 @@
 <html>
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="Content-Security-Policy" content="worker-src blob: ; child-src blob: ; img-src data: blob: https: ; connect-src https: http://localhost:* ws://localhost:* ;" />
     <title>deck.gl example</title>
     <style>
+      .tooltip {
+        position: absolute;
+        background: #1a1a2e;
+        color: white;
+        padding: 8px 12px;
+        border-radius: 4px;
+        pointer-events: none;
+        font-family: sans-serif;
+        font-size: 14px;
+        display: none;
+        width: auto;
+        height: auto;
+      }
+
       #container {
         position: fixed;
         top: 0;
@@ -28,12 +43,163 @@
       #deck-canvas {
         mix-blend-mode: screen;
       }
+
+      /* filter panel — top left */
+      #filter-panel {
+        position: fixed;
+        top: 16px;
+        /*left: 16px;*/
+        right:16px;
+        z-index: 10;
+        background: #1a1a2e;
+        border: 1px solid #444;
+        border-radius: 6px;
+        padding: 10px;
+        font-family: sans-serif;
+        min-width: 220px;
+      }
+
+      /* segmented toggle */
+      #mode-toggle {
+        display: flex;
+        margin-bottom: 10px;
+        border-radius: 4px;
+        overflow: hidden;
+        border: 1px solid #555;
+      }
+
+      #mode-toggle button {
+        flex: 1;
+        padding: 6px 8px;
+        background: transparent;
+        color: #aaa;
+        border: none;
+        font-family: sans-serif;
+        font-size: 12px;
+        cursor: pointer;
+      }
+
+      #mode-toggle button.active {
+        background: #2e2e50;
+        color: white;
+      }
+
+      /* instruction text */
+      #filter-instruction {
+        font-size: 11px;
+        color: #888;
+        margin-bottom: 8px;
+        line-height: 1.4;
+      }
+
+      /* shared dropdown style */
+      #origin-filter,
+      #dest-state-filter,
+      #dest-filter {
+        width: 100%;
+        background: #0d0d1f;
+        color: white;
+        border: 1px solid #444;
+        border-radius: 4px;
+        padding: 6px 8px;
+        font-family: sans-serif;
+        font-size: 13px;
+        cursor: pointer;
+        box-sizing: border-box;
+      }
+
+      #origin-filter option,
+      #dest-state-filter option,
+      #dest-filter option {
+        background: #1a1a2e;
+      }
+
+      #legend {
+        position: fixed;
+        bottom: 24px;
+        right: 16px;
+        z-index: 10;
+        background: #1a1a2e;
+        color: white;
+        padding: 8px 12px;
+        border-radius: 4px;
+        font-family: sans-serif;
+        font-size: 12px;
+      }
+
+      #legend-title {
+        font-size: 11px;
+        color: #aaa;
+        margin-bottom: 8px;
+      }
+
+      /* each row: coloured bar on the left, number on the right */
+      .legend-row {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 6px;
+      }
+
+      .legend-bar {
+        height: 8px;
+        border-radius: 2px;
+        flex-shrink: 0;
+      }
+
+      .legend-label {
+        font-size: 11px;
+        color: #ccc;
+        white-space: nowrap;
+      }
     </style>
   </head>
   <body>
+    <div id="filter-panel">
+
+      <!-- segmented toggle -->
+      <div id="mode-toggle">
+        <button id="btn-origin" class="active">Flow by Origin</button>
+        <button id="btn-dest">Flow by Destination</button>
+      </div>
+
+      <!-- instruction text — swapped by JS -->
+      <div id="filter-instruction">
+        Pick a state to see all flows going out.<br/>
+        Line thickness shows relative volume.
+      </div>
+
+      <!-- origin dropdown (visible by default) -->
+      <select id="origin-filter"></select>
+
+      <!-- destination tab: state filter then locality filter (both hidden until mode switches) -->
+      <select id="dest-state-filter" style="display:none">
+        <option value="">-- Filter by State --</option>
+      </select>
+      <select id="dest-filter" style="display:none; margin-top:6px">
+        <option value="">-- Pick a Locality --</option>
+      </select>
+
+    </div>
     <div id="container">
       <div id="map"></div>
       <canvas id="deck-canvas"></canvas>
+    </div>
+    <div id="tooltip" class="tooltip"></div>
+    <div id="legend">
+      <div id="legend-title">Flow Volume</div>
+      <div class="legend-row">
+        <div class="legend-bar" id="legend-high-bar" style="width:50px; background:rgba(222, 198, 174);"></div>
+        <span class="legend-label" id="legend-high-label">—</span>
+      </div>
+      <div class="legend-row">
+        <div class="legend-bar" id="legend-mid-bar" style="width:50px; background:rgba(235, 173, 124);"></div>
+        <span class="legend-label" id="legend-mid-label">—</span>
+      </div>
+      <div class="legend-row">
+        <div class="legend-bar" id="legend-low-bar" style="width:50px; background:rgba(212, 112, 56);"></div>
+        <span class="legend-label" id="legend-low-label">—</span>
+      </div>
     </div>
     <script type="module" src="main.js"></script>
   </body>

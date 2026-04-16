@@ -1,0 +1,194 @@
+name,id,lat,lon,adm_level,state_filter
+Aj Jazirah,1,14.589485,33.27362,State,
+Central Darfur,2,12.402911,23.364413,State,
+East Darfur,3,11.017195,26.409638,State,
+Khartoum,4,15.851318,32.843002,State,
+North Darfur,5,16.217571,25.556517,State,
+North Kordofan,6,14.847728,29.761701,State,
+Sennar,7,12.907198,34.042836,State,
+South Darfur,8,11.00282,24.420469,State,
+South Kordofan,9,11.293547,30.847982,State,
+West Darfur,10,13.519303,22.616657,State,
+West Kordofan,11,11.906944,28.392115,State,
+White Nile,12,13.359391,32.316944,State,
+Al Malha,13,17.564078,25.792038,Locality,North Darfur
+Al Manaqil,14,14.132764,32.934234,Locality,Aj Jazirah
+Al Qurashi,15,14.305408,32.63886,Locality,Aj Jazirah
+Janub Al Jazirah,16,14.145362,33.421643,Locality,Aj Jazirah
+Medani Al Kubra,17,14.335648,33.607358,Locality,Aj Jazirah
+Um Algura,18,14.49061,33.907755,Locality,Aj Jazirah
+Al Kamlin,19,15.128601,32.940258,Locality,Aj Jazirah
+Al Hasahisa,20,14.78013,32.925545,Locality,Aj Jazirah
+Sharg Al Jazirah,21,15.016972,33.602456,Locality,Aj Jazirah
+Ar Rusayris,22,12.164843,34.581526,Locality,Blue Nile
+At Tadamon - BN,23,11.663392,33.640707,Locality,Blue Nile
+Baw,24,11.133073,33.800953,Locality,Blue Nile
+Ed Damazine,25,12.079783,34.23656,Locality,Blue Nile
+Geisan,26,11.175661,34.666003,Locality,Blue Nile
+Al Butanah,27,15.028183,34.598493,Locality,Gedaref
+Al Fao,28,14.042375,34.190523,Locality,Gedaref
+Al Fashaga,29,14.250381,35.980078,Locality,Gedaref
+Al Galabat Al Gharbyah - Kassab,30,13.535521,35.36822,Locality,Gedaref
+Al Mafaza,31,13.641604,34.491596,Locality,Gedaref
+Al Qureisha,32,13.727283,36.072089,Locality,Gedaref
+AR Rahad,33,13.233515,34.808656,Locality,Gedaref
+Basundah,34,12.933774,35.838709,Locality,Gedaref
+Galabat Ash-Shargiah,35,13.378072,35.801919,Locality,Gedaref
+Madeinat Al Gedaref,36,14.031355,35.377522,Locality,Gedaref
+Wasat Al Gedaref,37,14.15704,34.981265,Locality,Gedaref
+Madeinat Kassala,38,15.441068,36.379277,Locality,Kassala
+Halfa Aj Jadeedah,39,15.462172,35.614284,Locality,Kassala
+Reifi Shamal Ad Delta,40,16.528271,35.985057,Locality,Kassala
+Reifi Telkok,41,16.182537,36.613579,Locality,Kassala
+Reifi Aroma,42,15.814433,35.895545,Locality,Kassala
+Reifi Hamashkureib,43,16.833135,36.570315,Locality,Kassala
+Reifi Nahr Atbara,44,15.68227,35.415331,Locality,Kassala
+Reifi Kassla,45,15.251261,36.372341,Locality,Kassala
+Reifi Gharb Kassala,46,15.312026,36.092712,Locality,Kassala
+Karrari,47,16.087487,32.352515,Locality,Khartoum
+Sharg An Neel,48,15.725083,33.380571,Locality,Khartoum
+Jebel Awlia,49,15.361011,32.583531,Locality,Khartoum
+Um Bada,50,16.127237,32.071757,Locality,Khartoum
+Ad Dabbah,51,17.231144,30.689276,Locality,Northern
+Al Burgaig,52,19.592873,30.655079,Locality,Northern
+Al Golid,53,17.854741,28.928065,Locality,Northern
+Delgo,54,20.130977,29.061767,Locality,Northern
+Halfa,55,21.2419,28.700439,Locality,Northern
+Merwoe,56,18.33174,31.968329,Locality,Northern
+Port Sudan,57,19.508626,37.209322,Locality,Red Sea
+Sawakin,58,19.004451,37.240975,Locality,Red Sea
+Hala'ib,59,21.765717,35.906454,Locality,Red Sea
+Jubayt Elma'aadin,60,21.133124,34.946642,Locality,Red Sea
+Sinkat,61,18.889487,36.661004,Locality,Red Sea
+Dordieb,62,17.535641,35.883005,Locality,Red Sea
+Tawkar,63,17.997189,37.394726,Locality,Red Sea
+Al Ganab,64,19.550798,35.147386,Locality,Red Sea
+Ad Damar,65,17.121049,34.259104,Locality,River Nile
+Al Buhaira,66,19.910568,32.606046,Locality,River Nile
+Al Matama,67,16.726159,32.7084,Locality,River Nile
+Atbara,68,17.853429,32.913587,Locality,River Nile
+Barbar,69,18.148134,33.734758,Locality,River Nile
+Shendi,70,16.430402,33.692223,Locality,River Nile
+Ad Dali,71,12.526733,33.438086,Locality,Sennar
+Sinja,72,13.137546,33.740814,Locality,Sennar
+Abu Hujar,73,12.612193,33.89529,Locality,Sennar
+Sennar,74,13.539079,33.24522,Locality,Sennar
+Ad Dinder,75,12.735365,34.803236,Locality,Sennar
+As Suki,76,12.91538,34.141804,Locality,Sennar
+Sharg Sennar,77,13.761927,33.846929,Locality,Sennar
+Ad Diwaim,78,13.968012,31.981474,Locality,White Nile
+Um Rimta,79,14.593573,31.936371,Locality,White Nile
+Rabak,80,13.405578,32.780542,Locality,White Nile
+Kosti,81,12.896885,32.66677,Locality,White Nile
+As Salam / Ar Rawat,82,12.369001,32.309445,Locality,White Nile
+Al Gitaina,83,14.472854,32.375079,Locality,White Nile
+Aj Jabalain,84,12.674495,32.967693,Locality,White Nile
+Guli,85,13.322783,32.408424,Locality,White Nile
+Abassiya,86,12.321521,31.300937,Locality,South Kordofan
+Abu Jubayhah,87,11.148388,31.725415,Locality,South Kordofan
+Ar Rahad,88,13.233515,34.808656,Locality,Gedaref
+Ar Rahad,89,12.751902,30.665244,Locality,Gedaref
+Ar Rashad,90,11.785499,31.091876,Locality,South Kordofan
+At Tadamon - SK,91,12.052538,31.679317,Locality,South Kordofan
+Bara,92,14.050263,30.906266,Locality,North Kordofan
+Ag Geneina,93,13.35858,22.35312,Locality,West Darfur
+Al lait,94,11.941731,26.77957,Locality,North Darfur
+Buram,95,10.705195,25.093828,Locality,South Darfur
+As Sunta,96,10.660952,25.577011,Locality,South Darfur
+Kas,97,12.474009,24.179044,Locality,South Darfur
+As Serief,98,13.960687,23.597457,Locality,North Darfur
+As Salam - SD,99,11.648242,24.764545,Locality,South Darfur
+Sharg Aj Jabal,100,12.875603,24.488907,Locality,South Darfur
+Ed Al Fursan,101,11.680975,24.333004,Locality,South Darfur
+Beida,102,12.887752,22.042525,Locality,West Darfur
+Foro Baranga,103,12.241949,22.60086,Locality,West Darfur
+Gharb Jabal Marrah,104,13.063795,24.006328,Locality,Central Darfur
+Kebkabiya,105,13.609103,24.221376,Locality,North Darfur
+Mukjar,106,11.808494,23.456506,Locality,Central Darfur
+Kubum,107,11.776744,23.939006,Locality,South Darfur
+Saraf Omra,108,13.587977,23.435877,Locality,North Darfur
+Shamal Jabal Marrah,109,13.292689,24.471027,Locality,Central Darfur
+Um Baru,110,15.346977,24.163569,Locality,North Darfur
+Um Dukhun,111,11.374759,23.094016,Locality,Central Darfur
+Wadi Salih,112,12.414903,23.31342,Locality,Central Darfur
+Wasat Jabal Marrah,113,13.138674,24.276752,Locality,Central Darfur
+Zalingi,114,13.046634,23.537915,Locality,Central Darfur
+Abu Jabrah,115,10.9356,26.79963,Locality,East Darfur
+Abu Karinka,116,11.59401,26.55873,Locality,East Darfur
+Ad Du'ayn,117,11.42031,26.20074,Locality,East Darfur
+Adila,118,11.43547,27.00871,Locality,East Darfur
+Al Firdous,119,10.92772,25.9059,Locality,East Darfur
+Assalaya,120,11.672855,25.992083,Locality,East Darfur
+Bahr Al Arab,121,10.231793,26.701278,Locality,East Darfur
+Dar As Salam,122,13.183605,25.319644,Locality,North Darfur
+Shia'ria,123,12.532951,25.693837,Locality,East Darfur
+Yassin,124,11.845257,25.577187,Locality,East Darfur
+As Sunut,125,12.025664,28.908089,Locality,West Kordofan
+Al Fasher,126,13.779,25.37041,Locality,North Darfur
+Al Koma,127,14.09588,27.28825,Locality,North Darfur
+Kateila,128,11.030976,24.286542,Locality,South Darfur
+Jebel Moon,129,14.057811,22.878224,Locality,West Darfur
+Kelemando,130,13.131685,25.969161,Locality,North Darfur
+Kernoi,131,15.001922,23.532342,Locality,North Darfur
+Al Kurmuk,132,10.526217,34.112256,Locality,Blue Nile
+Wad Al Mahi,133,11.607414,34.782122,Locality,Blue Nile
+Gala'a Al Nahal,134,13.335568,35.103673,Locality,Gedaref
+Reifi Khashm Elgirba,135,15.744422,34.99398,Locality,Kassala
+Bahri,136,15.998119,32.801408,Locality,Khartoum
+Um Durman,137,15.447412,32.350618,Locality,Khartoum
+Khartoum,138,15.552506,32.561114,Locality,Khartoum
+Dongola,139,19.233941,29.637782,Locality,Northern
+Haya,140,18.094982,36.242429,Locality,Red Sea
+Abu Hamad,141,20.16364,33.218942,Locality,River Nile
+Tendalti,142,12.967541,32.027342,Locality,White Nile
+Abu Kershola,143,12.014373,30.801127,Locality,South Kordofan
+Abu Zabad,144,12.645239,29.306019,Locality,West Kordofan
+Abyei,145,10.833424,27.684931,Locality,West Kordofan
+Al Dibab,146,10.305377,28.746786,Locality,West Kordofan
+Al Idia,147,11.93892,27.906768,Locality,West Kordofan
+Al Khiwai,148,13.301541,28.995984,Locality,West Kordofan
+Al Lagowa,149,11.353771,28.947703,Locality,West Kordofan
+Al Leri,150,10.130087,30.837483,Locality,South Kordofan
+Al Meiram,151,10.183227,27.701045,Locality,West Kordofan
+Al Quoz,152,12.46781,29.924219,Locality,South Kordofan
+An Nuhud,153,13.165317,28.3054,Locality,West Kordofan
+As Salam - WK,154,11.304914,28.217431,Locality,West Kordofan
+Babanusa,155,11.323818,27.590653,Locality,West Kordofan
+Delami,156,11.640414,30.325102,Locality,South Kordofan
+Dilling,157,11.931878,29.526205,Locality,South Kordofan
+Gebrat Al Sheikh,158,15.403081,30.910448,Locality,North Kordofan
+Ghadeer,159,10.705333,31.107582,Locality,South Kordofan
+Gharb Bara,160,13.924252,29.676256,Locality,North Kordofan
+Ghubaish,161,12.29314,27.493797,Locality,West Kordofan
+Habila - SK,162,11.983229,30.059404,Locality,South Kordofan
+Kadugli,163,11.061683,29.582842,Locality,South Kordofan
+Keilak,164,10.60813,29.315316,Locality,West Kordofan
+Sheikan,165,13.074924,30.061859,Locality,North Kordofan
+Soudari,166,15.376297,28.509012,Locality,North Kordofan
+Talawdi,167,10.555725,30.405758,Locality,South Kordofan
+Um Dam Haj Ahmed,168,13.669057,30.824667,Locality,North Kordofan
+Um Rawaba,169,13.155361,31.372576,Locality,North Kordofan
+Wad Bandah,170,13.212707,27.716197,Locality,West Kordofan
+Al Wihda,171,12.863599,24.983601,Locality,South Darfur
+At Tawisha,172,12.503779,26.59213,Locality,North Darfur
+At Tina,173,15.167895,23.127019,Locality,North Darfur
+Mershing,174,12.553172,24.982087,Locality,South Darfur
+Kutum,175,14.514787,24.700321,Locality,North Darfur
+Melit,176,14.272746,26.134034,Locality,North Darfur
+Tawila,177,13.351266,24.856704,Locality,North Darfur
+Um Kadadah,178,13.487833,26.880716,Locality,North Darfur
+Nyala Janoub,179,12.022886,24.825308,Locality,South Darfur
+Al Radoum,180,9.704639,24.238636,Locality,South Darfur
+Beliel,181,11.948623,25.132568,Locality,South Darfur
+Tulus,182,11.233746,24.946552,Locality,South Darfur
+Damso,183,10.778127,24.514846,Locality,South Darfur
+Rehaid Albirdi,184,11.01135,23.560735,Locality,South Darfur
+Gereida,185,11.133086,25.368702,Locality,South Darfur
+Nitega,186,12.57805,25.271605,Locality,South Darfur
+Kulbus,187,14.51589,22.711433,Locality,West Darfur
+Um Dafoug,188,10.553461,23.76361,Locality,South Darfur
+Ar Reif Ash Shargi,189,11.260003,29.853661,Locality,South Kordofan
+Azum,190,12.882062,23.02057,Locality,Central Darfur
+Habila - WD,191,12.67591,22.45467,Locality,West Darfur
+Kereneik,192,13.330925,22.821153,Locality,West Darfur
+Sirba,193,13.815601,22.44664,Locality,West Darfur

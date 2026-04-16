@@ -1,6 +1,6 @@
 {
-  "name": "flowmap.gl-purejs-example",
-  "version": "0.0.2",
+  "name": "snd-dtm-flowmap-2026",
+  "version": "1.0.0",
   "type": "module",
   "private": true,
   "license": "MIT",
@@ -12,10 +12,11 @@
   "dependencies": {
     "@deck.gl/core": "^8.9.28",
     "@deck.gl/layers": "^8.9.28",
+    "@flowmap.gl/core": "^7.3.4",
     "@flowmap.gl/data": "8.0.1",
     "@flowmap.gl/layers": "8.0.1",
     "d3-fetch": "^3.0.1",
-    "maplibre-gl": "^3.3.1"
+    "mapbox-gl": "^2.15.0"
   },
   "devDependencies": {
     "vite": "^4.4.9"

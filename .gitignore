@@ -1,2 +1,6 @@
 # Project exclude paths
 /node_modules/
+/dist/
+.env
+Data/Data.xlsx
+yarn.lock
