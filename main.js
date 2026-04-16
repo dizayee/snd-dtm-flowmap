@@ -11,7 +11,7 @@ import mapboxgl from "mapbox-gl";
 
 const MAPBOX_TOKEN = import.meta.env.VITE_MAPBOX_TOKEN;
 const MAPLIBRE_STYLE = "mapbox://styles/dizayee/cmnrhgi7a001t01qz06zxcw2v";
-const DATA_PATH = 'Data';
+const DATA_PATH = 'Data'; // served from public/Data/ by Vite
 
 // ─── Load CSV data ────────────────────────────────────────────────────────────
 
