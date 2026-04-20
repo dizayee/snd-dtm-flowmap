@@ -29,6 +29,7 @@ async function fetchData() {
       origin: row.origin,
       dest:   row.dest,
       count:  Number(row.count),
+      year:   row.year,
     })),
   ]).then(([locations, flows]) => ({locations, flows}));
 }
@@ -43,15 +44,19 @@ fetchData().then((data) => {
   const width  = window.innerWidth;
   const height = window.innerHeight;
 
+  const autoViewState = getViewStateForLocations(
+    locations,
+    (loc) => [loc.lon, loc.lat],
+    [width, height],
+    {pad: 0.3}
+  );
+
   const initialViewState = {
-    ...getViewStateForLocations(
-      locations,
-      (loc) => [loc.lon, loc.lat],
-      [width, height],
-      {pad: 0.3}
-    ),
-    pitch:   45,
-    bearing: 15,
+    ...autoViewState,
+    longitude: autoViewState.longitude + 3,  // shift east to account for left panel
+    zoom:      autoViewState.zoom + 0.5,     // zoom in slightly
+    pitch:     45,
+    bearing:   15,
   };
 
   // ─── Mapbox base map ────────────────────────────────────────────────────────
@@ -74,6 +79,14 @@ fetchData().then((data) => {
   locations.forEach((loc) => {
     locationById[loc.id] = loc;
   });
+
+  // ─── Year filter state ──────────────────────────────────────────────────────
+
+  let selectedYear = '2026';
+
+  function flowsForYear(year) {
+    return flows.filter((f) => f.year === year);
+  }
 
   // ─── Helper: add an <option> to a <select> ─────────────────────────────────
 
@@ -237,6 +250,22 @@ fetchData().then((data) => {
   const originInstruction = 'Pick a state to see all flows going out.<br/>Line thickness shows relative volume.';
   const destInstruction   = 'Pick a locality to see which states flow into it.<br/>Line thickness shows relative volume.';
 
+  // ─── Single function that re-renders based on current selections ────────────
+
+  function applyCurrentFilter() {
+    var filtered;
+    if (btnOrigin.classList.contains('active')) {
+      filtered = flowsForYear(selectedYear).filter((f) => f.origin === originFilter.value);
+    } else {
+      filtered = destFilter.value
+        ? flowsForYear(selectedYear).filter((f) => f.dest === destFilter.value)
+        : [];
+    }
+    deck.setProps({layers: [buildLayer(filtered)]});
+    updateLegend(filtered);
+  }
+
+  // Tab toggle: Flow by Origin
   btnOrigin.addEventListener('click', () => {
     btnOrigin.classList.add('active');
     btnDest.classList.remove('active');
@@ -247,9 +276,7 @@ fetchData().then((data) => {
     destStateFilter.value = '';
     destFilter.value      = '';
     originFilter.value    = '1';
-    var filtered = flows.filter((f) => f.origin === '1');
-    deck.setProps({layers: [buildLayer(filtered)]});
-    updateLegend(filtered);
+    applyCurrentFilter();
   });
 
   // Tab toggle: Flow by Destination
@@ -264,40 +291,50 @@ fetchData().then((data) => {
     destStateFilter.value = '';
     destFilter.value      = '';
     populateLocalityDropdown('');
-    deck.setProps({layers: [buildLayer([])]});
-    updateLegend([]);
+    applyCurrentFilter();
   });
 
   // Origin state selected
   originFilter.addEventListener('change', () => {
-    destFilter.value = '';
-    var filtered = flows.filter((f) => f.origin === originFilter.value);
-    deck.setProps({layers: [buildLayer(filtered)]});
-    updateLegend(filtered);
+    applyCurrentFilter();
   });
 
   // Destination state filter selected — narrow the locality list
   destStateFilter.addEventListener('change', () => {
     populateLocalityDropdown(destStateFilter.value);
     destFilter.value = '';
-    deck.setProps({layers: [buildLayer([])]});
-    updateLegend([]);
+    applyCurrentFilter();
   });
 
   // Locality selected — show incoming flows
   destFilter.addEventListener('change', () => {
-    if (!destFilter.value) return;
-    originFilter.value = '';
-    var filtered = flows.filter((f) => f.dest === destFilter.value);
-    deck.setProps({layers: [buildLayer(filtered)]});
-    updateLegend(filtered);
+    applyCurrentFilter();
   });
+
+  // ─── Year toggle ────────────────────────────────────────────────────────────
+
+  const btn2024 = document.getElementById('btn-2024');
+  const btn2025 = document.getElementById('btn-2025');
+  const btn2026 = document.getElementById('btn-2026');
+
+  function setYear(year) {
+    selectedYear = year;
+    btn2024.classList.remove('active');
+    btn2025.classList.remove('active');
+    btn2026.classList.remove('active');
+    if (year === '2024') btn2024.classList.add('active');
+    if (year === '2025') btn2025.classList.add('active');
+    if (year === '2026') btn2026.classList.add('active');
+    applyCurrentFilter();
+  }
+
+  btn2024.addEventListener('click', () => setYear('2024'));
+  btn2025.addEventListener('click', () => setYear('2025'));
+  btn2026.addEventListener('click', () => setYear('2026'));
 
   // ─── Initial render: default to Al Jazirah (id = 1) ────────────────────────
 
   originFilter.value = '1';
-  var initialFlows = flows.filter((f) => f.origin === '1');
-  deck.setProps({layers: [buildLayer(initialFlows)]});
-  updateLegend(initialFlows);
+  applyCurrentFilter();
 
 });
