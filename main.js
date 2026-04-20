@@ -53,10 +53,10 @@ fetchData().then((data) => {
 
   const initialViewState = {
     ...autoViewState,
-    longitude: autoViewState.longitude + 3,  // shift east to account for left panel
+    longitude: autoViewState.longitude -3,  // shift east to account for left panel
     zoom:      autoViewState.zoom + 0.5,     // zoom in slightly
-    pitch:     45,
-    bearing:   15,
+    pitch:     50,
+    bearing:   16,
   };
 
   // ─── Mapbox base map ────────────────────────────────────────────────────────
