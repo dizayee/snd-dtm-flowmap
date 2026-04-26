@@ -53,8 +53,9 @@ fetchData().then((data) => {
 
   const initialViewState = {
     ...autoViewState,
-    longitude: autoViewState.longitude -3,  // shift east to account for left panel
-    zoom:      autoViewState.zoom + 0.5,     // zoom in slightly
+    latitude: autoViewState.latitude +3,
+    longitude: autoViewState.longitude -4,  // shift east to account for left panel
+    zoom:      autoViewState.zoom + 0.1,     // zoom in slightly
     pitch:     50,
     bearing:   16,
   };
