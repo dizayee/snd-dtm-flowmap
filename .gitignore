@@ -4,3 +4,4 @@
 .env
 Data/Data.xlsx
 yarn.lock
+main.backup.js
